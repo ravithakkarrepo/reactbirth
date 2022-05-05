@@ -4,9 +4,7 @@ stages:
 build:
     stage: build
     tags: 
-        - build
-        - deploy
-        - test
+        - mytag
     script:
         - echo "Building deploy package"
         - npm install
@@ -19,9 +17,7 @@ build:
 deploy_production:
     stage: deploy
     tags: 
-        - build                                         
-        - deploy      
-        - test
+        - mytag
     script:
         - echo "Deploying to server"
         - npm run start
